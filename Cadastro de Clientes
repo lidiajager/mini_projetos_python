@@ -1,0 +1,46 @@
+clientes = []
+
+while True:
+    print("\n=== Cadastro de Clientes ===")
+    print("1 - Cadastrar cliente")
+    print("2 - Listar clientes")
+    print("3 - Sair")
+
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == "1":
+        nome = input("Digite o nome do cliente: ")
+        idade = input("Digite a idade: ")
+        telefone = input("Digite o telefone: ")
+
+        cliente = {
+            "nome": nome,
+            "idade": idade,
+            "telefone": telefone
+        }
+
+        clientes.append(cliente)
+
+        print("\n✅ Cliente cadastrado com sucesso!")
+
+    elif opcao == "2":
+        print("\n=== Lista de Clientes ===")
+
+        if len(clientes) == 0:
+            print("Nenhum cliente cadastrado.")
+
+        else:
+            for cliente in clientes:
+                print(f"""
+Nome: {cliente['nome']}
+Idade: {cliente['idade']}
+Telefone: {cliente['telefone']}
+-------------------------
+""")
+
+    elif opcao == "3":
+        print("Programa encerrado.")
+        break
+
+    else:
+        print("❌ Opção inválida.")
