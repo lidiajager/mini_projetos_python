@@ -1,5 +1,5 @@
 # mini_projetos_python
-Projetos em python
+Calculadora
 
 print("=== Calculadora ===")
 
