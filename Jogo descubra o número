@@ -1,0 +1,33 @@
+#Jogo acerte o número aleatorio ( jogando com o PC)
+
+# lista de string
+import random
+
+# O computador escolhe um número aleatório entre 1 e 20
+numero_secreto = random.randint(1, 20)
+
+# O jogador tem 5 tentativas
+tentativas = 5
+
+print("🎮 Jogo de adivinhação!")
+print("Tente descobrir o número entre 1 e 20.")
+print("Você tem 5 tentativas.\n")
+
+# Loop das tentativas
+for i in range(tentativas):
+    # Entrada do jogador
+    palpite = int(input(f"Tentativa {i + 1}: Digite seu palpite: "))
+
+    # Verifica se acertou
+    if palpite == numero_secreto:
+        print("🎉 Parabéns! Você acertou o número!")
+        break  # interrompe o loop
+    # Se errou, dá dicas
+    elif palpite < numero_secreto:
+        print("📉 Muito baixo!\n")
+    else:
+        print("📈 Muito alto!\n")
+
+# Se terminar o loop sem acertar
+else:
+    print(f"😢 Você perdeu! O número era {numero_secreto}.")
