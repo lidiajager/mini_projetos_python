@@ -1,9 +1,18 @@
-#recebe dos jogadores a escolha
-jogador1 = input("Escolha pedra, papel ou tesoura: ").lower() # o lower faz com que o programa aceite qualquer variação de letra maiuscula dada pelo usuário
-jogador2 = input("Escolha pedra, papel ou tesoura: ").lower()
+# Pedra papel tesoura - jogo
 
-# interpreta as vantagens
+# Explica o jogo ao usuário
 
+print("__JOGO PEDRA PAPEL TESOURA (2 jogadores)__")
+print("Bem vindos! Cada jogador escolhe uma das opções")
+opcoes_validas = ("pedra", "papel", "tesoura")
+print(f"Opções válidas: {opcoes_validas}")
+print("-" *25) # imprime uma linha para separar
+
+# Recebe escolha do usuário
+jogador1 = input("Escolha: pedra, papel ou tesoura: ").lower().strip()
+jogador2 = input("Escolha: pedra, papel ou tesoura: ").lower().strip() # lower e strip -> reconhece qualquer entrada maiuscula e retira espaçoes extras caso tenha
+
+#interpretando as respostas
 if jogador1 == jogador2:
     print("Empate!")
 
@@ -16,3 +25,23 @@ elif (
 
 else:
     print("Jogador 2 venceu!")
+
+print("______FIM DE JOGO________")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
